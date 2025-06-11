@@ -1,0 +1,132 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.calendar-container {
+  max-width: 800px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.month-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.calendar div {
+  background: #e9f0f7;
+  border-radius: 8px;
+  height: 100px;
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.calendar div:hover {
+  background: #d0e3f0;
+}
+
+.day-number {
+  font-weight: bold;
+}
+
+.event-title {
+  font-size: 0.8em;
+  margin-top: 5px;
+  background: #007bff;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.close-button {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="text"], textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+button {
+  padding: 10px;
+  background: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#deleteEvent {
+  background: #dc3545;
+}
+
+#deleteEvent:hover {
+  background: #c82333;
+}
+
+.export-container {
+  text-align: center;
+  margin-top: 20px;
+}
