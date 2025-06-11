@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agenda Pessoal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="calendar-container">
+    <header>
+      <h1>Agenda Mensal</h1>
+      <div class="month-controls">
+        <button id="prevMonth">&#8592;</button>
+        <span id="monthYear"></span>
+        <button id="nextMonth">&#8594;</button>
+      </div>
+    </header>
+    <div class="calendar" id="calendar"></div>
+  </div>
+
+  <!-- Modal -->
+  <div id="eventModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Registrar Evento</h2>
+      <form id="eventForm">
+        <input type="hidden" id="eventId">
+        <label>Data:</label>
+        <input type="text" id="eventDate" readonly>
+
+        <label>Título:</label>
+        <input type="text" id="eventTitle" required>
+
+        <label>Descrição:</label>
+        <textarea id="eventDescription"></textarea>
+
+        <button type="submit">Salvar</button>
+        <button type="button" id="deleteEvent">Excluir</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="export-container">
+    <button id="exportPDF">Exportar PDF do Mês</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
